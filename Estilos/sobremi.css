@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #192153;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-image: url("../imagenes/Diseño\ sin\ título\ \(11\).png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #0a0808;
+    position: relative; /* Necesario para la posición del menú */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    position: absolute; /* Fijar posición */
+    top: 0; /* Asegurar que esté en la parte superior */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        display: none; /* Inicialmente oculto */
+        position: absolute;
+        width: 100%;
+        top: 60px; /* Debajo de la barra de navegación */
+        background-color: rgba(0, 0, 0, 0.5);
+
+        
+    }
+
+    .navbar ul.active {
+        display: flex; /* Mostrar cuando se active */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        order: -1;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 24px;
+        padding: 10px;
+    }
+}
+
+
+
+.intro, .experience, .certifications, .skills, .contact {
+    padding: 2rem 1rem;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.experience h2, .certifications h2, .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.carousel-inner img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact p {
+    font-size: 1.1rem;
+}
+
+footer {
+    background: #080808;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+}
